@@ -15,3 +15,10 @@ npm --registry https://registry.npm.taobao.org install express
     npm install -g cnpm --registry=https://registry.npm.taobao.org
 
     使用  cnpm install express
+
+# flex存在兼容性，flex 有三个版本，分别是：
+`CSS
+    display: box
+    display: flexbox
+    display: flex
+`

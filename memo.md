@@ -11,3 +11,5 @@
 5. 西乔的九卦，程序员漫画
 
 6. 抽空需要尝试一下rollupjs（类webpack前端打包，https://rollupjs.org/guide/en）
+
+7. typescript
