@@ -17,8 +17,17 @@ npm --registry https://registry.npm.taobao.org install express
     使用  cnpm install express
 
 # flex存在兼容性，flex 有三个版本，分别是：
-`CSS
-    display: box
-    display: flexbox
-    display: flex
+`
+    display: box;
+    display: flexbox;
+    display: flex;
+`
+如果用了autoprefixer，则只需要写一个，display: flex
+
+但是需要在package.json里面加上
+`
+"browserslist": [
+   "iOS >= 8",
+   "Android > 4"
+]
 `
