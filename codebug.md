@@ -31,3 +31,10 @@ npm --registry https://registry.npm.taobao.org install express
    "Android > 4"
 ]
 `
+
+# gulp-uglify压缩JS居然不支持ES6
+但是可以先转为ES5再压缩，问题又来了，转ES5之后出现了require未定义，待解决。
+pump([gulp.src('./src/sw.js'), babel({ presets: [es2015] }), uglify(), gulp.dest('./we/cx')])
+
+# Uncaught (in promise) Error: Network Error
+是因为Promise.reject返回了一个拒绝状态的promise对象，如果其后的then/catch都没有申明onRejected毁掉，就会抛出这样的错误。并且，外部的promise无法捕获这个错误，同时，由于promise是异步的，try/catch也无法捕获。所以，promise记得写上catch。
