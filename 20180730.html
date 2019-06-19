@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            window.XMLHttpRequest.prototype.send = function () {
+                console.log('XML', this)
+            }
+            window.addEventListener('error', function(err, url, line) {
+                console.log('onerror2222', err, url, line)
+            }, true)
+            
+            console.log('performance', window.performance.getEntriesByType('resource'), performance.getEntries())
+        </script>
+        <script src="ffdf.js"></script>
+        <script>
+            
+            console.log('logloglog', var1)
+
+        </script>
+    </body>
+</html>
